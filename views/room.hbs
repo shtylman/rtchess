@@ -1,0 +1,23 @@
+<center>
+  <div id="chess-board">
+    <div class="message"></div>
+  </div>
+  <div class="button-bar">
+    <button id="sit-white" class="side-button btn" disabled>Sit as White</button>
+    <button id="sit-black" class="side-button btn" disabled>Sit as Black</button>
+    {{#unless kProduction}}
+    <span id="ping-text">Ping: <span id="ping"></span> ms</span>
+    {{/unless}}
+  </div>
+
+  <div class="alert alert-info" id="watching-notice">
+    You are currently watching this game. Click <em>sit</em> to join.
+  </div>
+</center>
+
+{{#extend "scripts"}}
+  <script src="/js/room.js"></script>
+  <script type="text/javascript">
+    require('__entry__').init('{{room_id}}');
+  </script>
+{{/extend}}
