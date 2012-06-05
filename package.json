@@ -19,7 +19,12 @@
     "jshint": "0.5.9"
   },
   "scripts": {
-    "test": "./node_modules/.bin/jshint app.js lib/*.js"
+    "test": "./node_modules/.bin/jshint app.js lib/*.js",
+    "start": "app.js"
   },
-  "private": true
+  "private": true,
+  "subdomain": "rtchess",
+  "engines": {
+    "node": "0.6.x"
+  }
 }
