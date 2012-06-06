@@ -13,7 +13,10 @@
     "connect-less": "0.3.0",
     "socket.io": "0.9.0",
     "script": "0.0.11",
-    "book": "1.2.0"
+    "book": "1.2.0",
+    "yummy": "0.0.3",
+    "passport": "0.1.9",
+    "passport-google": "0.2.0"
   },
   "devDependencies": {
     "jshint": "0.5.9"

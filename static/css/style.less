@@ -183,3 +183,35 @@
 .start-pressed {
     color:#3333ff;
 }
+
+hr.or {
+    position: relative;
+
+    &:after {
+        position: absolute;
+        left: 50%;
+        top: -12px;
+        height: 1em;
+        content: 'or';
+        padding: 1px;
+        background-color: white;
+        color: #bbb;
+    }
+}
+
+#room-list {
+    .pawn {
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 22px;
+
+        &.white {
+            background-image: url('/images/wp.png');
+        }
+
+        &.black {
+            background-image: url('/images/bp.png');
+        }
+    }
+}

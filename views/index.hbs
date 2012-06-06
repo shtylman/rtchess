@@ -13,12 +13,41 @@
   </div>
   <div class="span8">
     <h3>How to play</h3>
-    <p>Real-time chess is just like regular chess, except both players can move all their pieces at the same time.</p>
-    <p>After you move a piece, you can't move it again for a period of time.</p>
+    <p>The peices move just like in regular chess, the only difference is that both players can move any and all of their pieces at the same time. There are no turns!</p>
+    <p>After you move a piece, it cannot be moved for a short time.</p>
+
     <hr/>
+
+    {{#if user}}
+    <p>
+      {{user.email}} - {{user.rating}}
+    </p>
     <center>
-    <a href="/new_room" class="btn btn-success btn-large btn-home">New Game</a>
-    <a href="/join_random" class="btn btn-primary btn-large btn-home">Join Random Game</a>
+      <a href="/new_room" class="btn btn-info">New Unrated Game</a>
+      <a href="/new_room?rated=1" class="btn btn-danger">New Rated Game</a>
+      <a href="/join_random" class="btn btn-success">Join Random Game</a>
+
     </center>
+
+    <hr class="or"/>
+    <h4>select from a game below</h4>
+
+    <table class="table" id="room-list">
+    </table>
+
+    {{else}}
+    <center>
+      <a href="/new_room" class="btn btn-success btn-large btn-home">New Game</a>
+      <a href="/join_random" class="btn btn-primary btn-large btn-home">Join Random Game</a>
+    </center>
+
+    <hr class="or"/>
+
+    <a href='/auth/google'>google auth</a>
+    {{/if}}
   </div>
 </div>
+
+{{#extend "scripts"}}
+<script src="/js/room_list.js"></script>
+{{/extend}}
