@@ -13,18 +13,25 @@
     "connect-less": "0.3.0",
     "socket.io": "0.9.0",
     "script": "0.0.11",
-    "book": "1.2.0"
+    "book": "1.2.0",
+    "yummy": "0.0.3",
+    "passport": "0.1.9",
+    "passport-google": "0.2.0",
+    "mongolian": "0.1.18"
   },
   "devDependencies": {
     "jshint": "0.5.9"
   },
   "scripts": {
-    "test": "./node_modules/.bin/jshint app.js lib/*.js",
     "start": "app.js"
   },
   "private": true,
   "subdomain": "rtchess",
   "engines": {
     "node": "0.6.x"
-  }
+  },
+  "domains": [
+    "rtchess.me",
+    "www.rtchess.me"
+  ]
 }

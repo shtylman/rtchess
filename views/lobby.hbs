@@ -1,0 +1,29 @@
+{{#if user}}
+<center>
+  <a href="/new_room" class="btn btn-info">New Unrated Game</a>
+  <a href="/new_room?rated=1" class="btn btn-danger">New Rated Game</a>
+  <a href="/join_random" class="btn btn-success">Join Random Game</a>
+
+</center>
+
+<br/>
+<table class="table" id="room-list">
+</table>
+
+{{else}}
+<center>
+  <a href="/new_room" class="btn btn-success btn-large btn-home">New Game</a>
+  <a href="/join_random" class="btn btn-primary btn-large btn-home">Join Random Game</a>
+</center>
+
+<hr class="or"/>
+
+<center>
+  <h5>to play rated games</h5>
+  <a href='/auth/google' class="btn btn-default">login with google</a>
+</center>
+{{/if}}
+
+{{#extend "scripts"}}
+<script src="/js/room_list.js"></script>
+{{/extend}}
